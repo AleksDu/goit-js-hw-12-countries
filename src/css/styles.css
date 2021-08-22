@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  height: 100vh;
+  padding: 50px;
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 60%;
+  }
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: block;
+  width: 400px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+}
+
+.input-message {
+  display: block;
+  font-size: 45;
+}
+
+.input-list {
+  padding-left: 0;
+  font-size: 27px;
+}
+
+.input-list li {
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.country__title-name {
+  text-align: center;
+  font-size: 47px;
+  margin-top: 0;
+}
+
+.country__box {
+  display: flex;
+  justify-content: center;
+}
+
+.country__content {
+  margin-right: 57px;
+}
+
+.country__text {
+  font-size: 37px;
+}
+
+.country__text span {
+  font-weight: bold;
+}
+
+.country__languages-list {
+  font-size: 32px;
+  padding-left: 60px;
+}
+
+.country__img {
+  width: 27%;
+}
