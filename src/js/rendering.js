@@ -29,7 +29,7 @@ refs.input.addEventListener(
 );
 
 function queryAnswer(event) {
-  let inputValue = event.target.value.trim();
+  let inputValue = event.target.value.trim().toLowerCase();
 
   if (!inputValue) {
     error();
