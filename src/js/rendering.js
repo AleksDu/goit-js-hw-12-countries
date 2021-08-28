@@ -12,10 +12,10 @@ inputMessage: document.querySelector('.input-message'),
 inputList: document.querySelector('.input-list')
 }
 
-function fetchCountries(searchQuery) {    
+async function fetchCountries(searchQuery) {    
     const url = `https://restcountries.eu/rest/v2/name/${searchQuery}`; 
 
-    return fetch(url)
+    return await fetch(url)
     .then(response => {
         if (response.ok) {
           return response.json();
@@ -90,14 +90,14 @@ function selectResponseInfo(quantytyOfCountries) {
   }
 }
 
-function CountriesList(value) {
-  fetchCountries(value)
+async function CountriesList(value) {
+  await fetchCountries(value)
     .then(countries => selectResponseInfo(countries))
     .catch(error => errorMessage(error));
 }
 
 function errorMessage(err) {
-  deleteContent();
-  const message = 'Error request. Try again!'
+   deleteContent();
+   const message =  'Error request. Try again!'
   refs.inputMessage.insertAdjacentHTML('beforeend', message);
 }
