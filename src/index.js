@@ -1,6 +1,6 @@
-import { getPictures } from "./js/apiService.js";
 import cardTmp from "./partials/cardTmp.hbs";
 import * as basicLightbox from "basiclightbox";
+import { getPictures } from "./js/apiService.js";
 
 const options = {
   root: null,
@@ -21,9 +21,14 @@ refs.loadMore.style.visibility = "hidden";
 refs.form.addEventListener("submit", onSearch);
 refs.loadMore.addEventListener("click", onLoadMore);
 
+
 async function onSearch(e) {
   e.preventDefault();
   refs.loadMore.style.visibility = "hidden";
+  getPictures.query = e.currentTarget.elements.query.value;
+   if (getPictures.query === '') {
+    return alert('write something');
+  }
   if (!e.currentTarget.elements.query.value.trim()) {
     return;
   }
@@ -48,7 +53,7 @@ async function onLoadMore() {
   status.page += 1;
   const pictures = await getPictures(status.value, status.page);
   refs.gallery.insertAdjacentHTML("beforeend", cardTmp(pictures));
-  if (status.page === 2) {
+  if (status.page === 3) {
     const observer = new IntersectionObserver(onLoadMore, options);
     observer.observe(refs.loadMore);
   }
