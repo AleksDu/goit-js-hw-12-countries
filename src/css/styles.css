@@ -1,5 +1,5 @@
 :root {
-  --background-color-button-search: seashell;
+  --background-color-button-search: rgb(185, 129, 88);
   --accent-color: #a86262;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-duration: 250ms;
@@ -19,8 +19,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: 'Grandstander', cursive;
-
+  font-family: 'system-ui', cursive;
+ background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
   background-size: cover;
   background-position: 50% -50px;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
 }
 
 .gallery {
-  width: 1220px;
+  width: 0 auto;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +61,7 @@ body {
 }
 
 .search-form {
-  width: 350px;
+ width: 500px;
   height: 50px;
   padding: 10px;
   font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
@@ -73,4 +73,3 @@ body {
   margin-bottom: 50px;
   margin-top: 50px;
 }
-© 2021 GitHub, Inc.
