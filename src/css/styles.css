@@ -28,7 +28,7 @@ body {
 }
 
 .gallery {
-  width: 1220px;
+  width: 0 auto;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
