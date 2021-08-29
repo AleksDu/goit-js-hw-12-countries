@@ -1,3 +1,11 @@
+:root {
+  --box-shadow: 0px 0px 10px 7px #a3a8b9;
+  --background-color-button-search: seashell;
+  --accent-color: #a86262;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,93 +16,64 @@ html {
   box-sizing: inherit;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-    'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Grandstander', cursive;
 
-  height: 100vh;
-  padding: 50px;
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  background-size: cover;
+  background-position: 50% -50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 60%;
-  }
-  50% {
-    background-position: 100% 60%;
-  }
-  100% {
-    background-position: 0% 60%;
-  }
-}
-
-.input-box {
+.gallery {
+  width: 1220px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
   align-items: center;
 }
 
-.input {
-  display: block;
-  width: 400px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 20px;
-  outline: none;
-  border: none;
-  border-radius: 7px;
-}
-
-.input-message {
-  display: block;
-  font-size: 45;
-}
-
-.input-list {
-  padding-left: 0;
-  font-size: 27px;
-}
-
-.input-list li {
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-.country__title-name {
-  text-align: center;
-  font-size: 47px;
-  margin-top: 0;
-}
-
-.country__box {
+.stats {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.country__content {
-  margin-right: 57px;
+.load-more {
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  background-color: var(--background-color-button-search);
+  border: none;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: 0.4s;
+  margin-left: 45%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
-.country__text {
-  font-size: 37px;
+.search-form {
+  width: 350px;
+  height: 50px;
+  padding: 10px;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 25px;
+  background-color: var(--background-color-button-search);
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 7px;
+  margin-left: 40%;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
-
-.country__text span {
-  font-weight: bold;
-}
-
-.country__languages-list {
-  font-size: 32px;
-  padding-left: 60px;
-}
-
-.country__img {
-  width: 27%;
-}
+© 2021 GitHub, Inc.
